@@ -1,0 +1,11 @@
+mixin tutorBlock(tutor = {})
+  .tutor-img-block
+    img(src=tutor.img_url)
+    p=tutor.short_description
+  h3= tutor.type + ' - ' + tutor.name + ' 강사님'
+  span 1회 #{tutor.fee}원
+  - var desc = tutor.description.split("\n");
+  p=desc[0]
+  p=desc[1]
+  p #[span 레슨 장소:] #{tutor.region.join(" / ")}
+  p #[span 전문 분야:] #{tutor.expert.join(", ")}

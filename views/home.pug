@@ -1,0 +1,80 @@
+extends layouts/main
+include mixins/tutorBlock
+
+block content
+  // swiper1
+  .swiper-container.swiper1
+    .swiper-wrapper
+      .swiper-slide.selected
+        span| 전체
+      .swiper-slide
+        span| 운동
+      .swiper-slide
+        span| 필라테스
+  // swiper2
+  .swiper-container.swiper2
+    .swiper-wrapper
+      .swiper-slide.start
+        .main-img
+          img(src="/assets/imgs/main-banner.png")
+        .main-img-sentence
+          h3| 하루 운동,
+          h3| 오늘 같이 할래요?
+        .container
+          .row
+            .col
+              img(src="/assets/imgs/pt.png" class="align-middle")
+            .col
+              img(src="/assets/imgs/pilates.png")
+            .col
+              img(src="/assets/imgs/snpe.png")
+            .col
+              img(src="/assets/imgs/ballet.png")
+          .row
+            .col
+              p| PT
+            .col
+              p| 필라테스
+            .col
+              p| SNPE
+            .col
+              p| 발레
+          .row
+            .col
+              img(src="/assets/imgs/golf.png")
+            .col
+              img(src="/assets/imgs/all.png")
+            .col| 
+            .col|
+          .row
+            .col
+              p| 골프
+            .col
+              p| 전체보기
+            .col
+              p| 
+            .col
+              p| 
+        .tutor-list
+          .tutor-list__header
+            img(src="/assets/imgs/tutor_logo.png")
+            span| 검증된 강사님
+          each tutor in tutors
+            .tutor-block
+              a(href=`/tutors/${tutor.id}`).tutor-block__hyperlink
+                +tutorBlock({
+                    img_url: tutor.img_url,
+                    name: tutor.name,
+                    fee: tutor.fee,
+                    region: tutor.region,
+                    type: tutor.type,
+                    short_description: tutor.short_description,
+                    description: tutor.description,
+                    expert: tutor.expert,
+
+                })
+      .swiper-slide
+        span| 운동
+      .swiper-slide
+        span| 필라테스
+

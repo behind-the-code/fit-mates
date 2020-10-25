@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "NotoSansKR-Regular";
+  src: url("/assets/fonts/NotoSansKR-Regular.woff");
+}
+@font-face {
+  font-family: "NotoSansKR-Thin";
+  src: url("/assets/fonts/NotoSansKR-Thin.woff");
+}
+@font-face {
+  font-family: "NotoSansKR-Bold";
+  src: url("/assets/fonts/NotoSansKR-Bold.woff");
+}
+@font-face {
+  font-family: "NotoSansKR-Light";
+  src: url("/assets/fonts/NotoSansKR-Light.woff");
+}
+@font-face {
+  font-family: "NotoSansKR-Medium";
+  src: url("/assets/fonts/NotoSansKR-Medium.woff");
+}
+.show {
+  width: 95%;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 100px;
+  border: 5px solid #eee;
+  border-radius: 5px;
+  font-size: 14px;
+}
+* {
+  font-family: "NotoSansKR-Regular";
+}
+body {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  color: #333;
+  padding: 0;
+  // font: "Microsoft Yahei", Verdana, Tahoma;
+  // text-align: center;
+}
+
+.container {
+  width: 100%;
+  // border: 1px solid white;
+}
+.swiper1 {
+  width: 100%;
+}
+.swiper1 .selected {
+  color: #1a84b5;
+  border-bottom: 4px solid #1a84b5;
+}
+.swiper1 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  height: 50px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.swiper2 {
+  width: 100%;
+}
+.swiper2 .swiper-slide {
+  height: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+.swiper-slide {
+  &.start {
+    position: relative;
+    .main-img {
+      img {
+        width: 100%;
+      }
+    }
+    .main-img-sentence {
+      position: absolute;
+      top: 2%;
+      left: 3%;
+      h3 {
+        text-align: left;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        &:first-child {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .container {
+      .row {
+        &:first-child {
+          margin-top: 30px;
+        }
+        &:nth-child(2) {
+          margin-top: 10px;
+          margin-bottom: 30px;
+        }
+        &:nth-child(3) {
+          img {
+            &:first-child {
+              width: 30px;
+            }
+          }
+        }
+        &:nth-child(4) {
+          margin-top: 10px;
+          margin-bottom: 30px;
+        }
+        .col {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+  .tutor-list {
+    a.tutor-block__hyperlink {
+      color: inherit;
+    }
+    .tutor-list__header {
+      img {
+        width: 20%;
+      }
+      span {
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      margin-bottom: 10px;
+    }
+    text-align: left;
+    padding-left: 4%;
+    padding-right: 4%;
+    .tutor-block {
+      margin-bottom: 45px;
+      .tutor-img-block {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        img {
+          width: 100%;
+        }
+        p {
+          position: absolute;
+          // top: 0px;
+          bottom: -8px;
+          font-weight: 400;
+          font-size: 13px;
+          color: white;
+        }
+      }
+      h3 {
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      span {
+        color: #1a84b5;
+        font-weight: 800;
+      }
+      p {
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+    }
+  }
+  span {
+    font-size: 15px;
+  }
+}
+
+.swiper-container {
+  &.swiper1 {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}

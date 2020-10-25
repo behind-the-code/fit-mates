@@ -1,0 +1,16 @@
+extends layouts/main
+
+block content
+    .tutor-detail__image
+        img(src=tutor.detail_img_url)
+    .tutor-detail__container
+        .tutor-detail__content
+            p.tutor-detail__name 운동 | #{tutor.name} 강사님
+            .tutor-detail__description
+                h2 #{tutor.detail_description}
+                .tutor-detail__type #{tutor.type}
+            ul.tutor-detail__tags
+                each tag in tutor.hashTags
+                    li= tag
+            p.tutor-detail__fee 1회: #{tutor.fee}원
+        
