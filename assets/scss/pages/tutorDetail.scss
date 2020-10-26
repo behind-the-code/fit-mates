@@ -11,34 +11,58 @@
 .tutor-detail__container {
   padding-left: 4%;
   padding-right: 4%;
-
-  .tutor-detail__description {
-    h2 {
-      font-size: 25px;
-      font-weight: 700;
-      width: 85%;
-    }
-    display: flex;
-    justify-content: space-between;
-    .tutor-detail__type {
-      font-size: 12px;
-      font-weight: 700;
-      color: white;
-      border: 1px black solid;
-      background-color: black;
-      border-radius: 100%;
-      width: 40px;
-      height: 40px;
+  .tutor-detail__content {
+    margin-top: 10px;
+    .tutor-detail__description {
+      h2 {
+        margin-top: 5px;
+        font-family: "NotoSansKR-Bold";
+        font-size: 20px;
+        line-height: 1.5;
+        // font-weight: 700;
+        width: 75%;
+      }
       display: flex;
-      justify-content: center; /* align horizontal */
-      align-items: center; /* align vertical */
+      justify-content: space-between;
+      .tutor-detail__type {
+        font-size: 12px;
+        font-family: "NotoSansKR-Bold";
+        color: white;
+        border: 1px black solid;
+        background-color: black;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center; /* align horizontal */
+        align-items: center; /* align vertical */
+      }
     }
-  }
-  .tutor-detail__tags {
-    li {
-      border: 1px black solid;
-      border-radius: 30%;
-      display: inline;
+    .tutor-detail__tags {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      li {
+        margin-right: 5px;
+        font-size: 12px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        // border:  black solid;
+        background-color: rgb(238, 240, 246);
+        border-radius: 30px;
+        display: inline;
+      }
+    }
+    .tutor-detail__fee {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-family: "NotoSansKR-Bold";
+        font-size: 20px;
+        color: #3597db;
+      }
     }
   }
 }

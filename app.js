@@ -13,6 +13,8 @@ import globalRouter from "./routers/globalRouter";
 import routes from "./routes";
 import { localMiddleWare } from "./middlewares";
 import Tutor from "./models/Tutor";
+import dotenv from "dotenv";
+dotenv.config();
 import "./passport";
 import tutorRouter from "./routers/tutorRouter";
 const app = express();

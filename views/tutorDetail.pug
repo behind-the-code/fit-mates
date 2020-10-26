@@ -10,7 +10,9 @@ block content
                 h2 #{tutor.detail_description}
                 .tutor-detail__type #{tutor.type}
             ul.tutor-detail__tags
-                each tag in tutor.hashTags
+                each tag in tutor.expert
                     li= tag
-            p.tutor-detail__fee 1회: #{tutor.fee}원
+            .tutor-detail__fee
+                span 3개월 할부
+                p 1회: #{tutor.fee}원
         
