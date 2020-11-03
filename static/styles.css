@@ -194,12 +194,20 @@ input {
     z-index: 2;
     height: 100%;
     right: 4%; }
-    .header nav .button__wrapper a {
-      font-size: 12px;
-      color: inherit;
-      padding-top: 3px; }
-      .header nav .button__wrapper a:nth-child(2) {
-        margin-left: 10px; }
+    .header nav .button__wrapper ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .header nav .button__wrapper ul li a {
+        font-size: 12px;
+        color: inherit;
+        padding-top: 3px; }
+        .header nav .button__wrapper ul li a:first-child {
+          margin-left: 5px; }
+        .header nav .button__wrapper ul li a:nth-child(2) {
+          margin-left: 10px; }
 
 .footer {
   display: -webkit-box;

@@ -6,6 +6,12 @@ header.header
       a(href=routes.home)
         img(src="/assets/imgs/main-logo.png")
     .button__wrapper
-      //- a(href="#")|지원하기
-      //- a(href="#")|로그인
-  
+      ul
+        if !loggedUser
+          li 
+            a(href=routes.login) 로그인
+          li
+            a(href=routes.join) 지원하기
+        else 
+          li
+            a(href=routes.logout) 로그아웃
