@@ -16,3 +16,25 @@ $(".tab_menu_btn").on("click", function () {
   $(".tab_box").hide();
   $(".tab_box").eq(idx).show();
 });
+
+$(function () {
+  $(".menu__wrapper").on("click", function () {
+    $(".sideNav")[0].style.width = "250px";
+    // $("body")[0].style.marginLeft = "250px";
+  });
+
+  $(".closeButton").on("click", function () {
+    $(".sideNav")[0].style.width = "0";
+    // $("body")[0].style.marginLeft = "0";
+  });
+});
+
+// const openNav = () => {
+//   document.getElementById("mySidenav").style.width = "250px";
+//   document.getElementById("main").style.marginLeft = "250px";
+// }
+
+// function closeNav() {
+//   document.getElementById("mySidenav").style.width = "0";
+//   document.getElementById("main").style.marginLeft = "0";
+// }
