@@ -4,7 +4,7 @@ import multer from "multer";
 const multerVideo = multer({ dest: "uploads/videos/" });
 
 export const localMiddleWare = (req, res, next) => {
-  res.locals.siteName = "WeTube";
+  res.locals.siteName = "fit-mates";
   res.locals.routes = routes;
   res.locals.loggedUser = req.user || null;
   next();

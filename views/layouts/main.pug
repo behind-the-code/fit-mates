@@ -11,8 +11,13 @@ html
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js")
   body
+    
     .sideNav
       button.closeButton &times;
+      if !loggedUser
+        h1 안녕하세요!
+      else
+        h1 #{user.name}님 안녕하세요!
       a About
       a Services
     include ../partials/header
