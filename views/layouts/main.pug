@@ -13,13 +13,32 @@ html
   body
     
     .sideNav
-      button.closeButton &times;
-      if !loggedUser
-        h1 안녕하세요!
-      else
-        h1 #{user.name}님 안녕하세요!
-      a About
-      a Services
+      //- img(src="/assets/imgs/main/close.png").closeButton 
+      .sideNavMain
+        h1.sidebarLogo COMMUNITING
+        if !loggedUser
+          p 안녕하세요!
+        else
+          img(src="/assets/imgs/main/sidebar-profile.png", width="70px")
+          h2 #{user.name} 회원님
+          h2 #{user.email}
+      
+      ul.sideNavMenu
+        //- li
+        //-   img(src="/assets/imgs/main/icon.png")
+        //-   a 개인 정보 수정
+        li
+          img(src="/assets/imgs/main/notice-icon.png")
+          a 공지사항
+        li
+          img(src="/assets/imgs/main/communiting-icon.png")
+          a COMMUNITING 소개
+        li
+          img(src="/assets/imgs/main/ask-icon.png")
+          a 문의하기
+        li
+          img(src="/assets/imgs/main/agreement-icon.png")
+          a 이용약관
     include ../partials/header
     main
       block content

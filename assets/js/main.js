@@ -23,7 +23,7 @@ $(function () {
     // $("body")[0].style.marginLeft = "250px";
   });
 
-  $(".closeButton").on("click", function () {
+  $("main").on("click", function () {
     $(".sideNav")[0].style.width = "0";
     // $("body")[0].style.marginLeft = "0";
   });
